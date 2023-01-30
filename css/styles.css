@@ -51,7 +51,18 @@ img {
 .title {
   margin-bottom: 72px;
 }
-
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 /* ================== COMPONENTS ================== */
 .web {
   color: var(--accent-color);
@@ -71,11 +82,11 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #f4f4fd;
+  display: block;
+  margin-bottom: 16px;
 }
 .section-subtitle {
   font-weight: 500;
@@ -152,15 +163,11 @@ img {
 }
 /* ================== /HEADER ================== */
 /* ================== HERO ==================== */
-.hero-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 188px;
-  padding-bottom: 188px;
-}
 .hero {
   background: var(--main-color);
+  padding-top: 188px;
+  padding-bottom: 188px;
+  text-align: center;
 }
 .hero-title {
   font-size: 56px;
@@ -170,13 +177,13 @@ img {
   color: var(--white-color);
   max-width: 500px;
   margin-bottom: 48px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .studio-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  display: flex;
-  align-items: center;
   letter-spacing: 0.04em;
   color: #ffffff;
   background: var(--accent-color);
@@ -203,6 +210,9 @@ img {
 }
 /* ================== /SECTION-ABOUT ==================== */
 /* ================== IMG-SECTION ==================== */
+.img-section {
+  padding-bottom: 120px;
+}
 .img-list {
   display: flex;
   justify-content: space-between;
@@ -229,10 +239,6 @@ img {
 }
 /* ================== /TEAM ==================== */
 /* ================== FOOTER ==================== */
-
-.logotype-footer {
-  margin-bottom: 16px;
-}
 .footer {
   background: var(--main-color);
   padding: 100px 0;
@@ -263,11 +269,13 @@ img {
   background: #404bbf;
   color: #ffffff;
 }
+.portfolio {
+  padding-top: 96px;
+}
 .portfolio-nav-list {
   display: flex;
   justify-content: center;
-  padding-top: 96px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .portfolio-nav-item:not(:last-child) {
   margin-right: 24px;
